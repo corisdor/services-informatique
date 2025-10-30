@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Services Détaillés | CORIS D'OR FIRM </title>
+    <style>
+        /* Base Styling (Similaire à l'Accueil) */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc;
+            color: #333;
+        }
+
+        header {
+            background: #1e3a8a;
+            color: #fff;
+            padding: 1.5em 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        header .logo-container img {
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.7em 1.2em;
+            margin: 0 0.5em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* Retrait des styles de la bande défilante */
+        .developpeur-bande, .developpeur-bande marquee {
+            display: none !important;
+        }
+
+        /* Service List Styling */
+        .service-item {
+            padding: 30px;
+            margin-bottom: 25px;
+            border-left: 5px solid #047857; /* Bordure verte pour l'accent */
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-item h2 {
+            color: #1e3a8a;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .service-item ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .service-item ul li {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="%23047857" d="M10 15.586l-3.293-3.293a1 1 0 0 0-1.414 1.414l4 4a1 1 0 0 0 1.414 0l8-8a1 1 0 0 0-1.414-1.414L10 15.586z"/></svg>') no-repeat left center;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+        
+        /* Back to Home Button */
+        .btn-accueil {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #1d4ed8; 
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 20px 0;
+            transition: background-color 0.3s;
+            font-weight: 500;
+        }
+
+        .btn-accueil:hover {
+            background-color: #1e3a8a;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
+            header .logo-container {
+                flex-direction: column;
+                margin-bottom: 5px;
+            }
+            header .logo-container img {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="logo.jpg" alt="Logo de l'entreprise">
+                <h1>Nos Prestations Détaillées</h1>
+            </div>
+            <nav>
+                <a href="index.html">Accueil</a>
+               
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="btn-accueil">← Retour à l'Accueil</a>
+
+        <div class="service-item">
+            <h2>🛠️ Dépannage et Réparation de PC</h2>
+            <p>Notre service d'urgence pour vous remettre sur pied rapidement. Diagnostic précis et devis transparent.</p>
+            <ul>
+                <li>Diagnostic complet et résolution de pannes matérielles (disque, RAM, alimentation).</li>
+                <li>Nettoyage profond et éradication de virus, malwares et logiciels espions.</li>
+                <li>Réparation de l'environnement Windows/macOS (problèmes de démarrage, écrans bleus).</li>
+            </ul>
+        </div>
+
+        <div class="service-item">
+            <h2>⚙️ Installation et Configuration</h2>
+            <p>Configuration optimale pour une performance maximale dès le début.</p>
+            <ul>
+                <li>Installation sécurisée des Systèmes d'Exploitation (Windows 11, macOS) et pilotes.</li>
+                <li>Mise en place et configuration de logiciels métiers et suites bureautiques (Office, Adobe).</li>
+                <li>Configuration de réseaux domestiques ou PME (Wi-Fi, imprimantes partagées).</li>
+            </ul>
+        </div>
+
+        <div class="service-item">
+            <h2>🌐 Conception de Site Web pour Entreprises</h2>
+            <p>Développez votre visibilité en ligne avec un site professionnel et moderne.</p>
+            <ul>
+                <li>Création de sites web statiques (vitrines) rapides et optimisés.</li>
+                <li>Design responsive et adapté aux mobiles.</li>
+                <li>Accompagnement de la conception à la mise en ligne.</li>
+            </ul>
+        </div>
+
+        <div class="service-item">
+            <h2>🛡️ Maintenance Préventive et Optimisation</h2>
+            <p>Le secret d'une informatique qui dure : l'entretien régulier.</p>
+            <ul>
+                <li>Optimisation logicielle (nettoyage de fichiers inutiles, gestion du démarrage).</li>
+                <li>Mises à jour critiques de sécurité et du système d'exploitation.</li>
+                <li>Conseil et mise en place de stratégies de sauvegarde de données (Cloud ou local).</li>
+            </ul>
+        </div>
+        
+        <a href="index.html" class="btn-accueil">← Retour à l'Accueil</a>
+
+    </div>
+</body>
+</html>
