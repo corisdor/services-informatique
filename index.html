@@ -168,4 +168,109 @@
             text-align: left;
             transition: box-shadow 0.3s, transform 0.2s;
             color: #e2e8f0;
-            font-size: 1rem; /*
+            font-size: 1rem; /* Texte de carte */
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            transform: translateY(-5px);
+        }
+
+        .card h4 {
+            color: #81e6d9;
+            margin-top: 0.5rem;
+            font-size: 1.2rem; /* Titre de carte */
+        }
+
+        /* Retrait des styles de la bande défilante */
+        .developpeur-bande, .developpeur-bande marquee {
+            display: none !important;
+        }
+
+        /* Back to Home Button (N'apparaît pas sur l'accueil, mais le style est là) */
+        .btn-accueil {
+            display: none;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            /* Ajustement des tailles pour les petits écrans */
+            body {
+                font-size: 15px; /* Légère réduction de la taille de base */
+            }
+            header h1 {
+                font-size: 1.5rem; /* Titre principal plus petit */
+            }
+            #hero {
+                padding: 4rem 1.5rem;
+            }
+            #hero h2 {
+                font-size: 2rem; /* Titre Hero adapté */
+            }
+            #hero p {
+                font-size: 1rem; /* Texte Hero adapté */
+            }
+            .service-cards {
+                flex-direction: column;
+            }
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
+            header .logo-container {
+                flex-direction: column;
+                margin-bottom: 5px;
+            }
+            header .logo-container img {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo de l'entreprise">
+                <h1>[Nom de l'Entreprise] : L'IT à Votre Service</h1>
+            </div>
+            <nav>
+                <a href="index.html" class="active">Accueil</a>
+                <a href="services.html">Services</a>
+                <a href="galerie.html">Galerie</a>
+                <a href="a-propos.html">À Propos</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="hero">
+            <h2>Dépannage Informatique, Maintenance et Création Web pour PME à Bobo</h2>
+            <p>**Rapidité, Expertise et Confiance** : Redémarrez vos projets sans attendre.</p>
+            <a href="contact.html" class="cta-button">👉 Contactez-Nous pour une Intervention Immédiate</a>
+        </section>
+
+        <section>
+            <h3>Nos Solutions Clés en Main</h3>
+            <div class="service-cards">
+                <div class="card">
+                    <h4>🔧 Dépannage & Réparation PC</h4>
+                    <p>Diagnostic rapide et réparation efficace de tous types de pannes (logiciel, matériel, virus).</p>
+                </div>
+                <div class="card">
+                    <h4>💿 Installation de Systèmes & Logiciels</h4>
+                    <p>Installation sécurisée de Windows, macOS, et configuration de vos logiciels professionnels.</p>
+                </div>
+                <div class="card">
+                    <h4>🌐 Conception de Site Web</h4>
+                    <p>Création de sites vitrines professionnels pour renforcer votre présence en ligne.</p>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
