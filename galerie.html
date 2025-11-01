@@ -99,9 +99,28 @@
 
     /* ---------- GALERIE SECTION ---------- */
     #galerie-section {
-      padding: 60px 0;
-      text-align: center;
-    }
+    position: relative;
+    padding: 40px 0;
+    text-align: center;
+    background: url('arriere-plan.jpg') center/cover no-repeat;
+}
+
+#galerie-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 🔥 Sombre à 50% */
+    z-index: 0;
+}
+
+#galerie-section * {
+    position: relative;
+    z-index: 1;
+}
+
 
     #galerie-section h3 {
       color: #1e3a8a;
@@ -239,3 +258,4 @@
   </div>
 </body>
 </html>
+
