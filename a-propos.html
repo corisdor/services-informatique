@@ -1,190 +1,215 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À Propos de Nous | CORIS D'OR FIRM </title>
-    <style>
-        /* Base Styling */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f9fc;
-            color: #333;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À Propos de Nous | CORIS D'OR FIRM</title>
+  <style>
+    /* --- Style général --- */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f7f9fc;
+    }
 
-        header {
-            background: #1e3a8a;
-            color: #fff;
-            padding: 1.5em 0;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    /* --- En-tête --- */
+    header {
+      position: relative;
+      background: url('background-about.jpg') center/cover no-repeat;
+      color: #fff;
+      padding: 100px 20px 80px;
+      text-align: center;
+      overflow: hidden;
+    }
 
-        header .logo-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 10px;
-        }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.55); /* 🌙 Fond assombri */
+      z-index: 0;
+    }
 
-        header .logo-container img {
-            height: 50px;
-            margin-right: 15px;
-        }
+    header .logo-container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.2em;
-        }
+    header .logo-container img {
+      height: 60px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+    }
 
-        .container {
-            width: 90%;
-            max-width: 900px;
-            margin: auto;
-            overflow: hidden;
-        }
+    header h1 {
+      font-size: 2.4em;
+      margin: 10px 0 0;
+      z-index: 1;
+    }
 
-        nav {
-            margin-top: 15px;
-        }
+    nav {
+      position: relative;
+      z-index: 1;
+      margin-top: 20px;
+    }
 
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 0.7em 1.2em;
-            margin: 0 0.5em;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            font-weight: 600;
-        }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 5px;
+      border-radius: 6px;
+      font-weight: 600;
+      background-color: rgba(255, 255, 255, 0.15);
+      transition: all 0.3s ease;
+    }
 
-        nav a:hover {
-            background-color: #1d4ed8;
-        }
+    nav a:hover {
+      background-color: #1d4ed8;
+    }
 
-        /* Retrait des styles de la bande défilante */
-        .developpeur-bande, .developpeur-bande marquee {
-            display: none !important;
-        }
+    /* --- Conteneur principal --- */
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 50px auto;
+    }
 
-        /* Content Styling */
-        section {
-            padding: 30px;
-            margin-bottom: 20px;
-            background: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
+    section {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      padding: 30px;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease;
+    }
 
-        section h2 {
-            color: #047857; /* Vert accent */
-            border-bottom: 2px solid #047857;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
+    section:hover {
+      transform: scale(1.01);
+    }
 
-        ul {
-            list-style: none;
-            padding: 0;
-        }
+    section h2 {
+      color: #1e3a8a;
+      border-left: 5px solid #1d4ed8;
+      padding-left: 10px;
+      margin-bottom: 20px;
+      font-size: 1.4em;
+    }
 
-        ul li {
-            background: #e0f2f1; /* Fond très clair pour les listes */
-            margin-bottom: 10px;
-            padding: 10px;
-            border-radius: 4px;
-            font-weight: 500;
-            color: #1e3a8a;
-        }
-        
-        /* Information Siège Social */
-        .siege-info {
-            font-weight: bold;
-            color: #1e3a8a;
-            background-color: #d1e7dd; /* Vert pâle */
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 20px;
-            border: 1px solid #047857;
-        }
+    section p {
+      text-align: justify;
+      color: #444;
+    }
 
-        /* Back to Home Button */
-        .btn-accueil {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: #1d4ed8; 
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            margin: 20px 0;
-            transition: background-color 0.3s;
-            font-weight: 500;
-        }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
 
-        .btn-accueil:hover {
-            background-color: #1e3a8a;
-        }
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            nav a {
-                display: block;
-                margin: 5px 0;
-            }
-            header .logo-container {
-                flex-direction: column;
-                margin-bottom: 5px;
-            }
-            header .logo-container img {
-                margin-right: 10;
-                margin-bottom: 10px;
-            }
-        }
-    </style>
+    ul li {
+      background: #eef2ff;
+      margin-bottom: 10px;
+      padding: 12px;
+      border-radius: 6px;
+      color: #1e3a8a;
+      font-weight: 500;
+    }
+
+    /* --- Bloc Siège Social --- */
+    .siege-info {
+      font-weight: bold;
+      color: #1e3a8a;
+      background-color: #d1e7dd;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+      border: 1px solid #047857;
+    }
+
+    /* --- Bouton retour --- */
+    .btn-accueil {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #1d4ed8;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      margin: 20px 0;
+      font-weight: 500;
+      transition: background-color 0.3s;
+    }
+
+    .btn-accueil:hover {
+      background-color: #1e3a8a;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 768px) {
+      header {
+        padding: 70px 20px;
+      }
+
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      nav a {
+        display: block;
+        margin: 8px auto;
+        width: fit-content;
+      }
+
+      section {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <div class="logo-container">
-                <img src="logo.jpg" alt="Logo de l'entreprise">
-                <h1>Notre Histoire et Nos Engagements</h1>
-            </div>
-            <nav>
-                <a href="index.html">Accueil</a>
-                
-            </nav>
-        </div>
-    </header>
-
-    <div class="container">
-        <a href="index.html" class="btn-accueil">← Retour à l'Accueil</a>
-
-        <section>
-            <h2>La Naissance d'une Nouvelle Expertise</h2>
-            <p>**CORIS D'OR FIRM** a été fondé récemment par **SANOU Amos **, fort  dans le support et l'ingénierie informatique.</p>
-            <p>Notre jeunesse est notre force : elle nous permet d'être **plus réactifs**, d'offrir des **tarifs plus justes** et d'être **à la pointe** des dernières technologies de dépannage, de sécurité et de développement web.</p>
-            <div class="siege-info">
-                Siège Social : Notre base opérationnelle est située à **Bobo-Dioulasso**.
-            </div>
-        </section>
-
-        <section>
-            <h2>Nos Valeurs Fondamentales</h2>
-            <ul>
-                <li>**Proximité :** Un seul interlocuteur qui comprend vos besoins locaux.</li>
-                <li>**Honnêteté :** Diagnostic clair et devis respecté, pas de frais cachés.</li>
-                <li>**Efficacité :** Des solutions durables pour minimiser les interruptions.</li>
-            </ul>
-        </section>
-        
-        <a href="index.html" class="btn-accueil">← Retour à l'Accueil</a>
-
+  <header>
+    <div class="logo-container">
+      <img src="logo.jpg" alt="Logo de CORIS D'OR FIRM">
+      <h1>Notre Histoire & Nos Engagements</h1>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
+  </header>
+
+  <div class="container">
+    <a href="index.html" class="btn-accueil">← Retour à l'Accueil</a>
+
+    <section>
+      <h2>La Naissance d'une Nouvelle Expertise</h2>
+      <p><strong>CORIS D'OR FIRM</strong> a été fondée par <strong>SANOU Amos</strong>, un passionné de l’informatique et de l’innovation technologique. Son objectif : apporter des solutions fiables, modernes et durables dans le domaine du support technique, de l’ingénierie et du développement web.</p>
+
+      <p>Notre jeunesse est notre force : elle nous permet d’être <strong>plus réactifs</strong>, de proposer des <strong>tarifs compétitifs</strong> et d’adopter <strong>les technologies les plus récentes</strong>.</p>
+
+      <div class="siege-info">
+        📍 <strong>Siège Social :</strong> Bobo-Dioulasso, Burkina Faso
+      </div>
+    </section>
+
+    <section>
+      <h2>Nos Valeurs Fondamentales</h2>
+      <ul>
+        <li><strong>Proximité :</strong> Un interlocuteur unique à votre écoute, proche de vos besoins.</li>
+        <li><strong>Honnêteté :</strong> Diagnostic clair, devis respecté, sans surprise.</li>
+        <li><strong>Efficacité :</strong> Des solutions pérennes pour une performance continue.</li>
+      </ul>
+    </section>
+
+    <a href="index.html" class="btn-accueil">← Retour à l'Accueil</a>
+  </div>
 </body>
 </html>
