@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil | CORIS D'OR FIRM - Solutions Informatiques Proches de Vous</title>
+    <title>Accueil | [Nom de l'Entreprise] - Solutions Informatiques Proches de Vous</title>
     <style>
-        /* Base Styling */
+        /* Base Styling - Inspiré par le design fourni */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tentative pour Inter, sinon fallback */
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f7f9fc;
-            color: #333;
+            background-color: #1a202c; /* Fond très sombre */
+            color: #e2e8f0; /* Texte clair par défaut */
         }
 
         /* HEADER & NAVIGATION */
         header {
-            background: BLUE; /* Bleu foncé principal */
+            background: #2d3748; /* Un peu plus clair que le body pour le header */
             color: #fff;
             padding: 1.5em 0;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: flex; /* Utilisation de flexbox pour aligner logo et titre */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            display: flex;
             flex-direction: column;
             align-items: center;
         }
@@ -31,17 +31,19 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 10px; /* Espace entre le logo/titre et la nav */
+            margin-bottom: 10px;
         }
 
         header .logo-container img {
-            height: 50px; /* Taille du logo */
-            margin-right: 15px; /* Espace entre le logo et le titre */
+            height: 50px;
+            margin-right: 15px;
+            filter: brightness(0) invert(1); /* Rend le logo blanc si c'est un logo sombre sur fond clair */
         }
 
         header h1 {
-            margin: 0; /* Réinitialiser la marge du titre */
+            margin: 0;
             font-size: 2.2em;
+            color: #f7fafc;
         }
 
         .container {
@@ -52,63 +54,94 @@
         }
 
         nav {
-            margin-top: 15px; /* Espace au-dessus de la navigation */
+            margin-top: 15px;
         }
 
         nav a {
-            color: #fff;
+            color: #a0aec0; /* Texte de navigation un peu estompé */
             text-decoration: none;
             padding: 0.7em 1.2em;
             margin: 0 0.5em;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, color 0.3s;
             font-weight: 600;
         }
 
-        nav a:hover {
-            background-color: #1d4ed8;
+        nav a:hover, nav a.active {
+            background-color: #4a5568;
+            color: #f7fafc;
         }
 
         /* SECTION STYLING */
         section {
             padding: 40px;
             margin-bottom: 30px;
-            background: #ffffff;
+            background: #2d3748; /* Fond des sections plus clair que le body */
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             text-align: center;
+            color: #e2e8f0;
         }
         
-        /* HERO SECTION */
+        /* HERO SECTION - Avec image d'arrière-plan */
         #hero {
-            background-color: #e0f2f1; /* Fond très clair */
-            padding: 60px 40px;
+            background-image: url('VOTRE_IMAGE_DE_FOND.jpg'); /* À remplacer par votre image */
+            background-size: cover;
+            background-position: center;
+            background-color: #3182ce; /* Couleur de fallback si l'image ne charge pas */
+            padding: 100px 40px; /* Plus d'espace pour l'effet hero */
             margin-top: 0;
+            border-radius: 0 0 10px 10px; /* Coins arrondis seulement en bas */
+            color: #fff;
+            position: relative;
+            z-index: 1; /* Assure que le texte est au-dessus */
+        }
+
+        #hero::before { /* Overlay sombre pour améliorer la lisibilité du texte */
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent noir */
+            border-radius: 0 0 10px 10px;
+            z-index: -1;
         }
 
         #hero h2 {
-            color: #047857; /* Vert pour le titre */
-            font-size: 2.5em;
+            color: #f6ad55; /* Jaune/orange pour le titre, comme dans l'exemple */
+            font-size: 3em; /* Taille plus grande */
             margin-bottom: 0.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        #hero p {
+            font-size: 1.4em;
+            color: #cbd5e0;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
         }
 
         /* CTA */
         .cta-button {
             display: inline-block;
-            padding: 15px 30px;
-            background-color: #047857; /* Vert accent */
-            color: white;
+            padding: 15px 35px;
+            background-color: #81e6d9; /* Bleu vert clair pour CTA */
+            color: #1a202c; /* Texte sombre sur CTA clair */
             text-decoration: none;
-            border-radius: 50px;
+            border-radius: 30px; /* Plus arrondis */
             margin-top: 25px;
-            font-size: 1.1em;
+            font-size: 1.2em;
             font-weight: bold;
-            transition: background-color 0.3s, transform 0.2s;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .cta-button:hover {
-            background-color: #065f46;
-            transform: translateY(-2px);
+            background-color: #4fd1c5;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
         /* Service Cards */
@@ -121,20 +154,27 @@
         
         .card {
             flex: 1;
-            padding: 20px;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
+            padding: 30px;
+            background: #2d3748; /* Fond des cartes */
+            border: 1px solid #4a5568;
+            border-radius: 10px;
             text-align: left;
-            transition: box-shadow 0.3s;
+            transition: box-shadow 0.3s, transform 0.2s;
+            color: #e2e8f0;
         }
 
         .card:hover {
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            transform: translateY(-5px);
         }
 
         .card h4 {
-            color: #1e3a8a;
+            color: #81e6d9; /* Couleur d'accent pour les titres de cartes */
             margin-top: 10px;
+            font-size: 1.4em;
+        }
+        .card p {
+            color: #cbd5e0;
         }
         
         /* Retrait des styles de la bande défilante */
@@ -164,6 +204,19 @@
                 margin-right: 0;
                 margin-bottom: 10px;
             }
+            #hero h2 {
+                font-size: 2em;
+            }
+            #hero p {
+                font-size: 1.1em;
+            }
+            .cta-button {
+                font-size: 1em;
+                padding: 12px 25px;
+            }
+            .card {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -172,23 +225,23 @@
     <header>
         <div class="container">
             <div class="logo-container">
-                <img src="logo.jpg" alt="Logo de l'entreprise">
-                <h1> CORIS D'OR FIRM : Une autre conception du monde informatique </h1>
+                <img src="logo.png" alt="Logo de l'entreprise">
+                <h1>[Nom de l'Entreprise] : L'IT à Votre Service</h1>
             </div>
             <nav>
-                
+                <a href="index.html" class="active">Accueil</a>
                 <a href="services.html">Services</a>
                 <a href="galerie.html">Galerie</a>
                 <a href="a-propos.html">À Propos</a>
-                
+                <a href="contact.html">Contact</a>
             </nav>
         </div>
     </header>
 
     <div class="container">
         <section id="hero">
-            <h2>Dépannage Informatique, Maintenance et Création Web pour Entreprises </h2>
-            <p style="font-size: 1.3em; color: #374151;">**Rapidité, Expertise et Confiance** : Redémarrez vos projets sans attendre.</p>
+            <h2>Dépannage Informatique, Maintenance et Création Web pour PME à Bobo</h2>
+            <p>**Rapidité, Expertise et Confiance** : Redémarrez vos projets sans attendre.</p>
             <a href="contact.html" class="cta-button">👉 Contactez-Nous pour une Intervention Immédiate</a>
         </section>
 
@@ -212,8 +265,4 @@
         
     </div>
 </body>
-
 </html>
-
-
-
