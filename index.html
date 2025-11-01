@@ -1,281 +1,262 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil | [Nom de l'Entreprise] - Solutions Informatiques Proches de Vous</title>
-    <style>
-        /* Base Styling - Inspiré par le design fourni */
-        body {
-            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #1a202c; /* Fond très sombre */
-            color: #e2e8f0; /* Texte clair par défaut */
-            font-size: 16px; /* Taille de base pour référence REM */
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accueil | CORIS D'OR FIRM - Solutions Informatiques Proches de Vous</title>
 
-        /* HEADER & NAVIGATION */
-        header {
-            background: #2d3748;
-            color: #fff;
-            padding: 1.5rem 0;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+  <style>
+    /* -------------------- BASE -------------------- */
+    body {
+      margin: 0;
+      font-family: "Poppins", "Segoe UI", Tahoma, sans-serif;
+      color: #1e293b;
+      background-color: #f8fafc;
+      line-height: 1.6;
+    }
 
-        header .logo-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 0.8rem;
-        }
+    h1, h2, h3, h4 {
+      font-weight: 600;
+      margin-top: 0;
+    }
 
-        header .logo-container img {
-            height: 3.2rem;
-            margin-right: 1rem;
-            filter: brightness(0) invert(1);
-        }
+    a {
+      text-decoration: none;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-            color: #f7fafc;
-        }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-            overflow: hidden;
-        }
+    /* -------------------- HEADER -------------------- */
+    header {
+      background: linear-gradient(135deg, #0f172a, #1e3a8a);
+      color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 1rem 0;
+    }
 
-        nav {
-            margin-top: 1rem;
-        }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      text-align: center;
+    }
 
-        nav a {
-            color: #a0aec0;
-            text-decoration: none;
-            padding: 0.7em 1.2em;
-            margin: 0 0.5em;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
+    .logo-container img {
+      height: 60px;
+      margin-right: 15px;
+    }
 
-        nav a:hover, nav a.active {
-            background-color: #4a5568;
-            color: #f7fafc;
-        }
+    .logo-container h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
 
-        /* SECTION STYLING */
-        section {
-            padding: 2.5rem;
-            margin-bottom: 1.8rem;
-            background: #2d3748;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            color: #e2e8f0;
-        }
-        
-        /* HERO SECTION - Avec image d'arrière-plan */
-        #hero {
-            background-image: url('VOTRE_IMAGE_DE_FOND.jpg');
-            background-size: cover;
-            background-position: center;
-            background-color: #3182ce;
-            padding: 6rem 2.5rem;
-            margin-top: 0;
-            border-radius: 0 0 10px 10px;
-            color: #fff;
-            position: relative;
-            z-index: 1;
-        }
+    nav {
+      margin-top: 0.8rem;
+      text-align: center;
+    }
 
-        #hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 0 0 10px 10px;
-            z-index: -1;
-        }
+    nav a {
+      color: #facc15;
+      font-weight: 600;
+      margin: 0 10px;
+      padding: 8px 16px;
+      border-radius: 30px;
+      transition: background 0.3s, color 0.3s;
+    }
 
-        #hero h2 {
-            color: #f6ad55;
-            font-size: 2.5rem;
-            margin-bottom: 0.5em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-        }
+    nav a:hover {
+      background-color: #facc15;
+      color: #0f172a;
+    }
 
-        #hero p {
-            font-size: 1.2rem;
-            color: #cbd5e0;
-            max-width: 800px;
-            margin: 0 auto 30px auto;
-        }
+    /* -------------------- HERO SECTION -------------------- */
+    #hero {
+      background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)),
+        url("fond-tech.jpg") center/cover no-repeat;
+      color: #fff;
+      padding: 100px 20px;
+      border-radius: 0 0 40px 40px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
-        /* CTA */
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background-color: #81e6d9;
-            color: #1a202c;
-            text-decoration: none;
-            border-radius: 30px;
-            margin-top: 1.5rem;
-            font-size: 1.1rem;
-            font-weight: bold;
-            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
+    #hero h2 {
+      font-size: 2.4rem;
+      margin-bottom: 15px;
+    }
 
-        .cta-button:hover {
-            background-color: #4fd1c5;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
+    #hero p {
+      font-size: 1.2rem;
+      color: #e2e8f0;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
 
-        h3 {
-             font-size: 1.8rem;
-             color: #f7fafc;
-        }
+    .cta-button {
+      background-color: #facc15;
+      color: #0f172a;
+      padding: 14px 35px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.3s;
+      display: inline-block;
+    }
 
-        /* Service Cards */
-        .service-cards {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            margin-top: 2rem;
-        }
-        
-        .card {
-            flex: 1;
-            padding: 1.8rem;
-            background: #2d3748;
-            border: 1px solid #4a5568;
-            border-radius: 10px;
-            text-align: left;
-            transition: box-shadow 0.3s, transform 0.2s;
-            color: #e2e8f0;
-            font-size: 1rem;
-        }
+    .cta-button:hover {
+      background-color: #fde047;
+      transform: translateY(-2px);
+    }
 
-        .card:hover {
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-            transform: translateY(-5px);
-        }
+    /* -------------------- SERVICES -------------------- */
+    section.services {
+      text-align: center;
+      padding: 60px 20px;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    }
 
-        .card h4 {
-            color: #81e6d9;
-            margin-top: 0.5rem;
-            font-size: 1.2rem;
-        }
+    section.services h3 {
+      font-size: 2rem;
+      color: #1e3a8a;
+      margin-bottom: 40px;
+    }
 
-        /* Retrait des styles de la bande défilante */
-        .developpeur-bande, .developpeur-bande marquee {
-            display: none !important;
-        }
+    .service-cards {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
-        /* Back to Home Button (N'apparaît pas sur l'accueil, mais le style est là) */
-        .btn-accueil {
-            display: none;
-        }
+    .card {
+      flex: 1 1 300px;
+      background-color: #f9fafb;
+      padding: 25px;
+      border-radius: 15px;
+      border: 1px solid #e2e8f0;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: left;
+    }
 
-        /* Responsive adjustments (RÉDUCTION SUPPLÉMENTAIRE) */
-        @media (max-width: 768px) {
-            body {
-                font-size: 14px; /* Plus petit pour le corps de texte */
-            }
-            header h1 {
-                font-size: 1.3rem; /* Titre principal encore plus petit */
-            }
-            #hero {
-                padding: 3rem 1rem; /* Moins de padding */
-            }
-            #hero h2 {
-                font-size: 1.8rem; /* Titre Hero réduit */
-            }
-            #hero p {
-                font-size: 0.9rem; /* Texte Hero réduit */
-            }
-            .cta-button {
-                font-size: 0.95rem; /* Bouton CTA réduit */
-                padding: 0.8rem 1.5rem;
-            }
-            h3 {
-                font-size: 1.5rem;
-            }
-            .service-cards {
-                flex-direction: column;
-                gap: 1.2rem;
-            }
-            .card {
-                padding: 1.2rem;
-                font-size: 0.9rem;
-            }
-            .card h4 {
-                font-size: 1.1rem;
-            }
-            nav a {
-                font-size: 0.9rem;
-            }
-        }
-    </style>
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h4 {
+      color: #0f172a;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      color: #475569;
+    }
+
+    /* -------------------- FOOTER -------------------- */
+    footer {
+      text-align: center;
+      padding: 25px 10px;
+      background: #0f172a;
+      color: #94a3b8;
+      margin-top: 50px;
+      font-size: 0.9rem;
+    }
+
+    /* -------------------- RESPONSIVE -------------------- */
+    @media (max-width: 768px) {
+      .logo-container {
+        flex-direction: column;
+      }
+
+      .logo-container img {
+        margin: 0 0 10px 0;
+      }
+
+      .logo-container h1 {
+        font-size: 1.4rem;
+      }
+
+      #hero {
+        padding: 70px 20px;
+      }
+
+      #hero h2 {
+        font-size: 1.8rem;
+      }
+
+      #hero p {
+        font-size: 1rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px;
+      }
+
+      .service-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
+
 <body>
-
-    <header>
-        <div class="container">
-            <div class="logo-container">
-                <img src="logo.png" alt="Logo de l'entreprise">
-                <h1>[Nom de l'Entreprise] : L'IT à Votre Service</h1>
-            </div>
-            <nav>
-                <a href="index.html" class="active">Accueil</a>
-                <a href="services.html">Services</a>
-                <a href="galerie.html">Galerie</a>
-                <a href="a-propos.html">À Propos</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </div>
-    </header>
-
+  <header>
     <div class="container">
-        <section id="hero">
-            <h2>Dépannage Informatique, Maintenance et Création Web pour PME à Bobo</h2>
-            <p>**Rapidité, Expertise et Confiance** : Redémarrez vos projets sans attendre.</p>
-            <a href="contact.html" class="cta-button">👉 Contactez-Nous pour une Intervention Immédiate</a>
-        </section>
-
-        <section>
-            <h3>Nos Solutions Clés en Main</h3>
-            <div class="service-cards">
-                <div class="card">
-                    <h4>🔧 Dépannage & Réparation PC</h4>
-                    <p>Diagnostic rapide et réparation efficace de tous types de pannes (logiciel, matériel, virus).</p>
-                </div>
-                <div class="card">
-                    <h4>💿 Installation de Systèmes & Logiciels</h4>
-                    <p>Installation sécurisée de Windows, macOS, et configuration de vos logiciels professionnels.</p>
-                </div>
-                <div class="card">
-                    <h4>🌐 Conception de Site Web</h4>
-                    <p>Création de sites vitrines professionnels pour renforcer votre présence en ligne.</p>
-                </div>
-            </div>
-        </section>
-        
+      <div class="logo-container">
+        <img src="logo.jpg" alt="Logo de l'entreprise" />
+        <h1>CORIS D'OR FIRM — Votre partenaire numérique de confiance</h1>
+      </div>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="services.html">Services</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="a-propos.html">À Propos</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
+  </header>
+
+  <section id="hero">
+    <div class="container">
+      <h2>Votre Solution Informatique, Rapide et Professionnelle</h2>
+      <p>Maintenance, Dépannage et Création de Sites Web modernes pour particuliers et entreprises.</p>
+      <a href="contact.html" class="cta-button">Contactez-nous dès maintenant</a>
+    </div>
+  </section>
+
+  <div class="container">
+    <section class="services">
+      <h3>Nos Services Professionnels</h3>
+      <div class="service-cards">
+        <div class="card">
+          <h4>🔧 Dépannage & Réparation PC</h4>
+          <p>Diagnostic rapide et réparation efficace de pannes matérielles ou logicielles, avec garantie de satisfaction.</p>
+        </div>
+        <div class="card">
+          <h4>💿 Installation & Configuration</h4>
+          <p>Installation sécurisée de systèmes d’exploitation et logiciels pour optimiser la performance de vos équipements.</p>
+        </div>
+        <div class="card">
+          <h4>🌐 Création de Sites Web</h4>
+          <p>Conception de sites modernes, responsives et élégants pour renforcer votre image professionnelle en ligne.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    © 2025 CORIS D'OR FIRM — Tous droits réservés | Développement et Innovation Informatique
+  </footer>
 </body>
 </html>
