@@ -1,237 +1,241 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galerie - Nos Réalisations | [Nom de l'Entreprise]</title>
-    <style>
-        /* Base Styling */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f9fc;
-            color: #333;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie - Nos Réalisations | CORIS D'OR FIRM</title>
+  <style>
+    /* ---------- BASE STYLING ---------- */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8fafc;
+      color: #334155;
+      line-height: 1.6;
+    }
 
-        header {
-            background: #1e3a8a;
-            color: #fff;
-            padding: 1.5em 0;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    /* ---------- HEADER ---------- */
+    header {
+      background: #1e3a8a;
+      color: #fff;
+      padding: 1.5em 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-        header .logo-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 10px;
-        }
+    header .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      text-align: center;
+    }
 
-        header .logo-container img {
-            height: 50px;
-            margin-right: 15px;
-        }
+    header .logo-container img {
+      height: 50px;
+      margin-right: 15px;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.2em;
-        }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 700;
+    }
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-            overflow: hidden;
-        }
+    nav {
+      margin-top: 15px;
+    }
 
-        nav {
-            margin-top: 15px;
-        }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.6em 1.2em;
+      margin: 0 0.4em;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+      font-weight: 600;
+    }
 
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 0.7em 1.2em;
-            margin: 0 0.5em;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            font-weight: 600;
-        }
+    nav a:hover {
+      background-color: #1d4ed8;
+    }
 
-        nav a:hover {
-            background-color: #1d4ed8;
-        }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-        /* Retrait des styles de la bande défilante */
-        .developpeur-bande, .developpeur-bande marquee {
-            display: none !important;
-        }
+    /* ---------- HERO SECTION ---------- */
+    .intro {
+      position: relative;
+      background: linear-gradient(
+          rgba(15, 23, 42, 0.6),
+          rgba(15, 23, 42, 0.6)
+        ),
+        url('imm.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      border-radius: 0 0 40px 40px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
 
-        /* Galerie Grid Styling */
-        #galerie-section {
-            padding: 40px 0;
-            text-align: center;
-        }
-        
-        #galerie-section h2 {
-            color: #1e3a8a;
-            margin-bottom: 20px;
-        }
+    .intro h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
 
-        .galerie-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
+    .intro p {
+      font-size: 1.2rem;
+      color: #e2e8f0;
+      max-width: 700px;
+      margin: 0 auto;
+    }
 
-        .galerie-item {
-            background: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-        
-        .galerie-item:hover {
-            transform: scale(1.02);
-        }
+    /* ---------- GALERIE SECTION ---------- */
+    #galerie-section {
+      padding: 60px 0;
+      text-align: center;
+    }
 
-        .galerie-item img, .galerie-item video {
-            width: 100%;
-            height: 200px; /* Hauteur fixe pour une grille uniforme */
-            object-fit: cover; /* Assure que l'image couvre l'espace sans déformation */
-            display: block;
-        }
-        
-        .galerie-item p {
-            padding: 15px;
-            margin: 0;
-            font-size: 0.9em;
-            color: #555;
-            background-color: #f0f4f8;
-        }
-        
-        /* Back to Home Button */
-        .btn-accueil {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: #1d4ed8; 
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            margin: 20px 0;
-            transition: background-color 0.3s;
-            font-weight: 500;
-        }
+    #galerie-section h3 {
+      color: #1e3a8a;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
 
-        .btn-accueil:hover {
-            background-color: #1e3a8a;
-        }
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            nav a {
-                display: block;
-                margin: 5px 0;
-            }
-            header .logo-container {
-                flex-direction: column;
-                margin-bottom: 5px;
-            }
-            header .logo-container img {
-                margin-right: 0;
-                margin-bottom: 10px;
-            }
-        }
-    </style>
+    .galerie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .galerie-item {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .galerie-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .galerie-item img,
+    .galerie-item video {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .galerie-item p {
+      padding: 15px;
+      margin: 0;
+      background-color: #f1f5f9;
+      color: #475569;
+      font-size: 0.95rem;
+    }
+
+    /* ---------- BUTTON ---------- */
+    .btn-accueil {
+      display: inline-block;
+      padding: 12px 28px;
+      background-color: #1e3a8a;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin: 30px auto;
+    }
+
+    .btn-accueil:hover {
+      background-color: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 768px) {
+      header .logo-container {
+        flex-direction: column;
+      }
+
+      header .logo-container img {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+
+      nav a {
+        display: block;
+        margin: 5px 0;
+      }
+
+      .intro h2 {
+        font-size: 1.8rem;
+      }
+
+      .intro p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-    <header>
-        <div class="container">
-            <div class="logo-container">
-                <img src="logo.jpg" alt="Logo de l'entreprise">
-                <h1>Nos Réalisations sur le Terrain 📸</h1>
-            </div>
-            <nav>
-                <a href="index.html">Accueil</a>
-                
-            </nav>
-        </div>
-    </header>
-
+  <header>
     <div class="container">
-        <a href="index.html" class="btn-accueil">← Retour à l'Accueil</a>
-
-        <section id="galerie-section">
-            <h2>Voir Notre Expertise en Action</h2>
-            <div class="galerie-grid">
-                
-                <div class="galerie-item">
-                    <img src="1.jpg" alt="Réparation PC Portable">
-                </div>
-                
-                <div class="galerie-item">
-                    <video controls src="vid1.mp4" poster="apercu-video.jpg">
-                   </video>
-                </div>
-<div class="galerie-item">
-                    <video controls src="vid2.mp4" poster="apercu-video.jpg">
-                   </video>
-                </div>
-<div class="galerie-item">
-                    <video controls src="vid3.mp4" poster="apercu-video.jpg">
-                   </video>
-                </div>
-                
-                <div class="galerie-item">
-                    <img src="2.jpg" alt="Installation Réseau">
-                   
-                </div>
-
-                <div class="galerie-item">
-                    <img src="3.jpg" alt="Installation Logiciel Pro">
-                </div>
-                <div class="galerie-item">
-                    <img src="4.jpg" alt="Installation Logiciel Pro">
-                </div>
-<div class="galerie-item">
-                    <img src="5.jpg" alt="Installation Logiciel Pro">
-                </div>
-<div class="galerie-item">
-                    <img src="6.jpg" alt="Installation Logiciel Pro">
-                </div>
-<div class="galerie-item">
-                    <img src="7.jpg" alt="Installation Logiciel Pro">
-                </div>
-<div class="galerie-item">
-                    <img src="8.jpg" alt="Installation Logiciel Pro">
-                </div>
-<div class="galerie-item">
-                    <img src="9.jpg" alt="Installation Logiciel Pro">
-                </div>
-<div class="galerie-item">
-                    <img src="10.jpg" alt="Installation Logiciel Pro">
-                </div>
-<div class="galerie-item">
-                    <img src="11.jpg" alt="Installation Logiciel Pro">
-                </div>
-<div class="galerie-item">
-                    <img src="12.jpg" alt="Installation Logiciel Pro">
-                </div>
-<div class="galerie-item">
-                    <img src="13.jpg" alt="Installation Logiciel Pro">
-                </div>
-            </div>
-        </section>
+      <div class="logo-container">
+        <img src="logo.jpg" alt="Logo de CORIS D'OR FIRM">
+        <h1>Galerie de Réalisations</h1>
+      </div>
+      <nav>
+        <a href="index.html">Accueil</a>
         
-        <a href="index.html" class="btn-accueil">← Retour à l'Accueil</a>
-
+      </nav>
     </div>
+  </header>
+
+  <section class="intro">
+    <h2>Nos Réalisations sur le Terrain 📸</h2>
+    <p>Découvrez nos interventions, projets et installations effectués pour nos clients.  
+      Des solutions informatiques fiables et professionnelles, en image.</p>
+  </section>
+
+  <div class="container">
+    <section id="galerie-section">
+      <h3>Voir Notre Expertise en Action</h3>
+      <div class="galerie-grid">
+        <div class="galerie-item"><img src="1.jpg" alt="Réparation PC Portable"></div>
+        <div class="galerie-item"><video controls src="vid1.mp4" poster="apercu-video.jpg"></video></div>
+        <div class="galerie-item"><video controls src="vid2.mp4" poster="apercu-video.jpg"></video></div>
+        <div class="galerie-item"><video controls src="vid3.mp4" poster="apercu-video.jpg"></video></div>
+        <div class="galerie-item"><img src="2.jpg" alt="Installation Réseau"></div>
+        <div class="galerie-item"><img src="3.jpg" alt="Installation Logiciel Pro"></div>
+        <div class="galerie-item"><img src="4.jpg" alt="Installation Logiciel Pro"></div>
+        <div class="galerie-item"><img src="5.jpg" alt="Installation Logiciel Pro"></div>
+        <div class="galerie-item"><img src="6.jpg" alt="Installation Logiciel Pro"></div>
+        <div class="galerie-item"><img src="7.jpg" alt="Installation Logiciel Pro"></div>
+        <div class="galerie-item"><img src="8.jpg" alt="Installation Logiciel Pro"></div>
+        <div class="galerie-item"><img src="9.jpg" alt="Installation Logiciel Pro"></div>
+        <div class="galerie-item"><img src="10.jpg" alt="Installation Logiciel Pro"></div>
+        <div class="galerie-item"><img src="11.jpg" alt="Installation Logiciel Pro"></div>
+        <div class="galerie-item"><img src="12.jpg" alt="Installation Logiciel Pro"></div>
+        <div class="galerie-item"><img src="13.jpg" alt="Installation Logiciel Pro"></div>
+      </div>
+    </section>
+
+    <div style="text-align:center;">
+      <a href="index.html" class="btn-accueil">← Retour à l'Accueil</a>
+    </div>
+  </div>
 </body>
 </html>
