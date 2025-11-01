@@ -3,51 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nos Services Détaillés | CORIS D'OR FIRM </title>
+    <title>Nos Services Détaillés | CORIS D'OR FIRM</title>
     <style>
-        /* Base Styling (Similaire à l'Accueil) */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+        /* ----- Styles généraux ----- */
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            background-color: #f7f9fc;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
             color: #333;
+            line-height: 1.6;
         }
 
         header {
-            background: #1e3a8a;
-            color: #fff;
+            background: linear-gradient(90deg, #1e3a8a, #2563eb);
+            color: white;
             padding: 1.5em 0;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         header .logo-container {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 10px;
+            flex-wrap: wrap;
         }
 
         header .logo-container img {
-            height: 50px;
+            height: 60px;
             margin-right: 15px;
         }
 
         header h1 {
+            font-size: 2em;
             margin: 0;
-            font-size: 2.2em;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1000px;
-            margin: auto;
-            overflow: hidden;
         }
 
         nav {
@@ -57,85 +51,131 @@
         nav a {
             color: #fff;
             text-decoration: none;
-            padding: 0.7em 1.2em;
-            margin: 0 0.5em;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            margin: 0 10px;
+            padding: 10px 18px;
+            border-radius: 6px;
             font-weight: 600;
+            transition: background-color 0.3s ease;
         }
 
         nav a:hover {
-            background-color: #1d4ed8;
+            background-color: rgba(255,255,255,0.2);
         }
 
-        /* Retrait des styles de la bande défilante */
-        .developpeur-bande, .developpeur-bande marquee {
-            display: none !important;
+        /* ----- Section principale ----- */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
         }
 
-        /* Service List Styling */
+        .intro {
+            background: url('images/bg-services.jpg') no-repeat center/cover;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .intro h2 {
+            font-size: 2.3em;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        /* ----- Cartes des services ----- */
         .service-item {
-            padding: 30px;
-            margin-bottom: 25px;
-            border-left: 5px solid #047857; /* Bordure verte pour l'accent */
-            background: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s;
+            background: white;
+            padding: 25px 30px;
+            margin: 25px 0;
+            border-left: 6px solid #047857;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
         }
 
         .service-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-6px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
         }
 
         .service-item h2 {
             color: #1e3a8a;
             border-bottom: 1px dashed #ccc;
             padding-bottom: 10px;
-            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .service-item p {
+            margin-bottom: 15px;
+            font-size: 1em;
         }
 
         .service-item ul {
             list-style-type: none;
-            padding: 0;
+            padding-left: 0;
         }
 
         .service-item ul li {
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="%23047857" d="M10 15.586l-3.293-3.293a1 1 0 0 0-1.414 1.414l4 4a1 1 0 0 0 1.414 0l8-8a1 1 0 0 0-1.414-1.414L10 15.586z"/></svg>') no-repeat left center;
-            padding-left: 25px;
             margin-bottom: 10px;
+            padding-left: 28px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23047857" height="20" width="20"><path d="M8.8 13.6L4.9 9.7q-.25-.25-.25-.625t.25-.625q.25-.25.625-.25t.625.25l3.05 3.05 5.6-5.6q.25-.25.625-.25t.625.25q.25.25.25.625t-.25.625l-6.25 6.25q-.25.25-.625.25t-.625-.25Z"/></svg>') no-repeat left center;
+            background-size: 20px;
         }
-        
-        /* Back to Home Button */
+
+        /* ----- Bouton retour ----- */
         .btn-accueil {
             display: inline-block;
-            padding: 12px 25px;
-            background-color: #1d4ed8; 
+            background: #2563eb;
             color: white;
             text-decoration: none;
-            border-radius: 6px;
-            margin: 20px 0;
-            transition: background-color 0.3s;
-            font-weight: 500;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            margin: 30px 0;
+            transition: background 0.3s ease;
         }
 
         .btn-accueil:hover {
-            background-color: #1e3a8a;
+            background: #1e3a8a;
         }
-        /* Responsive adjustments */
+
+        footer {
+            background-color: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 1.2em 0;
+            margin-top: 40px;
+            font-size: 0.95em;
+        }
+
+        /* ----- Responsive ----- */
         @media (max-width: 768px) {
-            nav a {
-                display: block;
-                margin: 5px 0;
-            }
             header .logo-container {
                 flex-direction: column;
-                margin-bottom: 5px;
             }
+
             header .logo-container img {
-                margin-right: 0;
-                margin-bottom: 10px;
+                margin: 0 0 10px 0;
+            }
+
+            nav a {
+                display: block;
+                margin: 5px auto;
+                width: fit-content;
+            }
+
+            .intro h2 {
+                font-size: 1.8em;
+            }
+
+            .service-item {
+                padding: 20px;
             }
         }
     </style>
@@ -143,63 +183,68 @@
 <body>
 
     <header>
-        <div class="container">
-            <div class="logo-container">
-                <img src="logo.jpg" alt="Logo de l'entreprise">
-                <h1>Nos Prestations Détaillées</h1>
-            </div>
-            <nav>
-                <a href="index.html">Accueil</a>
-               
-            </nav>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Logo de l'entreprise">
+            <h1>Nos Prestations Détaillées</h1>
         </div>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
 
-    <div class="container">
-        <a href="index.html" class="btn-accueil">← Retour à l'Accueil</a>
+    <section class="container">
+        <div class="intro">
+            <h2>Votre partenaire informatique de confiance</h2>
+            <p>Découvrez nos services professionnels adaptés à vos besoins, pour particuliers et entreprises.</p>
+        </div>
 
         <div class="service-item">
             <h2>🛠️ Dépannage et Réparation de PC</h2>
-            <p>Notre service d'urgence pour vous remettre sur pied rapidement. Diagnostic précis et devis transparent.</p>
+            <p>Un service rapide et fiable pour remettre vos équipements en état optimal.</p>
             <ul>
-                <li>Diagnostic complet et résolution de pannes matérielles (disque, RAM, alimentation).</li>
-                <li>Nettoyage profond et éradication de virus, malwares et logiciels espions.</li>
-                <li>Réparation de l'environnement Windows/macOS (problèmes de démarrage, écrans bleus).</li>
+                <li>Diagnostic complet et résolution de pannes matérielles.</li>
+                <li>Nettoyage et suppression de virus et malwares.</li>
+                <li>Réparation des problèmes système Windows/macOS.</li>
             </ul>
         </div>
 
         <div class="service-item">
             <h2>⚙️ Installation et Configuration</h2>
-            <p>Configuration optimale pour une performance maximale dès le début.</p>
+            <p>Configuration professionnelle pour une performance maximale dès le départ.</p>
             <ul>
-                <li>Installation sécurisée des Systèmes d'Exploitation (Windows 11, macOS) et pilotes.</li>
-                <li>Mise en place et configuration de logiciels métiers et suites bureautiques (Office, Adobe).</li>
-                <li>Configuration de réseaux domestiques ou PME (Wi-Fi, imprimantes partagées).</li>
+                <li>Installation des systèmes d’exploitation récents.</li>
+                <li>Configuration de logiciels et pilotes.</li>
+                <li>Réseaux domestiques et PME (Wi-Fi, imprimantes partagées).</li>
             </ul>
         </div>
 
         <div class="service-item">
-            <h2>🌐 Conception de Site Web pour Entreprises</h2>
-            <p>Développez votre visibilité en ligne avec un site professionnel et moderne.</p>
+            <h2>🌐 Conception de Sites Web</h2>
+            <p>Créez une présence en ligne élégante et performante.</p>
             <ul>
-                <li>Création de sites web statiques (vitrines) rapides et optimisés.</li>
-                <li>Design responsive et adapté aux mobiles.</li>
-                <li>Accompagnement de la conception à la mise en ligne.</li>
+                <li>Sites web modernes et adaptés aux mobiles.</li>
+                <li>Design professionnel et mise en ligne complète.</li>
+                <li>Accompagnement du projet à la maintenance.</li>
             </ul>
         </div>
 
         <div class="service-item">
-            <h2>🛡️ Maintenance Préventive et Optimisation</h2>
-            <p>Le secret d'une informatique qui dure : l'entretien régulier.</p>
+            <h2>🛡️ Maintenance et Sécurité</h2>
+            <p>Prévenez les pannes et protégez vos données sensibles.</p>
             <ul>
-                <li>Optimisation logicielle (nettoyage de fichiers inutiles, gestion du démarrage).</li>
-                <li>Mises à jour critiques de sécurité et du système d'exploitation.</li>
-                <li>Conseil et mise en place de stratégies de sauvegarde de données (Cloud ou local).</li>
+                <li>Optimisation des performances et nettoyage du système.</li>
+                <li>Mises à jour de sécurité régulières.</li>
+                <li>Stratégies de sauvegarde (Cloud et local).</li>
             </ul>
         </div>
-        
+
         <a href="index.html" class="btn-accueil">← Retour à l'Accueil</a>
+    </section>
 
-    </div>
+    <footer>
+        &copy; 2025 CORIS D'OR FIRM — Tous droits réservés
+    </footer>
+
 </body>
 </html>
