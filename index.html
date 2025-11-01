@@ -7,19 +7,20 @@
     <style>
         /* Base Styling - Inspiré par le design fourni */
         body {
-            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tentative pour Inter, sinon fallback */
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
             background-color: #1a202c; /* Fond très sombre */
             color: #e2e8f0; /* Texte clair par défaut */
+            font-size: 16px; /* Taille de base pour référence REM */
         }
 
         /* HEADER & NAVIGATION */
         header {
-            background: #2d3748; /* Un peu plus clair que le body pour le header */
+            background: #2d3748;
             color: #fff;
-            padding: 1.5em 0;
+            padding: 1.5rem 0;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             display: flex;
@@ -31,18 +32,18 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 10px;
+            margin-bottom: 0.8rem;
         }
 
         header .logo-container img {
-            height: 50px;
-            margin-right: 15px;
-            filter: brightness(0) invert(1); /* Rend le logo blanc si c'est un logo sombre sur fond clair */
+            height: 3.2rem; /* Légèrement plus petit en REM */
+            margin-right: 1rem;
+            filter: brightness(0) invert(1);
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.2em;
+            font-size: 2rem; /* Taille de base du titre H1 */
             color: #f7fafc;
         }
 
@@ -54,17 +55,18 @@
         }
 
         nav {
-            margin-top: 15px;
+            margin-top: 1rem;
         }
 
         nav a {
-            color: #a0aec0; /* Texte de navigation un peu estompé */
+            color: #a0aec0;
             text-decoration: none;
             padding: 0.7em 1.2em;
             margin: 0 0.5em;
             border-radius: 5px;
             transition: background-color 0.3s, color 0.3s;
             font-weight: 600;
+            font-size: 0.95rem; /* Taille de la navigation */
         }
 
         nav a:hover, nav a.active {
@@ -74,9 +76,9 @@
 
         /* SECTION STYLING */
         section {
-            padding: 40px;
-            margin-bottom: 30px;
-            background: #2d3748; /* Fond des sections plus clair que le body */
+            padding: 2.5rem;
+            margin-bottom: 1.8rem;
+            background: #2d3748;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             text-align: center;
@@ -85,39 +87,39 @@
         
         /* HERO SECTION - Avec image d'arrière-plan */
         #hero {
-            background-image: url('VOTRE_IMAGE_DE_FOND.jpg'); /* À remplacer par votre image */
+            background-image: url('VOTRE_IMAGE_DE_FOND.jpg');
             background-size: cover;
             background-position: center;
-            background-color: #3182ce; /* Couleur de fallback si l'image ne charge pas */
-            padding: 100px 40px; /* Plus d'espace pour l'effet hero */
+            background-color: #3182ce;
+            padding: 6rem 2.5rem; /* Plus d'espace pour l'effet hero */
             margin-top: 0;
-            border-radius: 0 0 10px 10px; /* Coins arrondis seulement en bas */
+            border-radius: 0 0 10px 10px;
             color: #fff;
             position: relative;
-            z-index: 1; /* Assure que le texte est au-dessus */
+            z-index: 1;
         }
 
-        #hero::before { /* Overlay sombre pour améliorer la lisibilité du texte */
+        #hero::before {
             content: "";
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent noir */
+            background-color: rgba(0, 0, 0, 0.5);
             border-radius: 0 0 10px 10px;
             z-index: -1;
         }
 
         #hero h2 {
-            color: #f6ad55; /* Jaune/orange pour le titre, comme dans l'exemple */
-            font-size: 3em; /* Taille plus grande */
+            color: #f6ad55;
+            font-size: 2.5rem; /* Taille du titre H2 de Hero */
             margin-bottom: 0.5em;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
         }
 
         #hero p {
-            font-size: 1.4em;
+            font-size: 1.2rem; /* Taille du texte dans Hero */
             color: #cbd5e0;
             max-width: 800px;
             margin: 0 auto 30px auto;
@@ -126,13 +128,13 @@
         /* CTA */
         .cta-button {
             display: inline-block;
-            padding: 15px 35px;
-            background-color: #81e6d9; /* Bleu vert clair pour CTA */
-            color: #1a202c; /* Texte sombre sur CTA clair */
+            padding: 1rem 2rem;
+            background-color: #81e6d9;
+            color: #1a202c;
             text-decoration: none;
-            border-radius: 30px; /* Plus arrondis */
-            margin-top: 25px;
-            font-size: 1.2em;
+            border-radius: 30px;
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
             font-weight: bold;
             transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -144,125 +146,26 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
+        h3 {
+             font-size: 1.8rem;
+             color: #f7fafc;
+        }
+
         /* Service Cards */
         .service-cards {
             display: flex;
             justify-content: space-between;
             gap: 20px;
-            margin-top: 30px;
+            margin-top: 2rem;
         }
         
         .card {
             flex: 1;
-            padding: 30px;
-            background: #2d3748; /* Fond des cartes */
+            padding: 1.8rem;
+            background: #2d3748;
             border: 1px solid #4a5568;
             border-radius: 10px;
             text-align: left;
             transition: box-shadow 0.3s, transform 0.2s;
             color: #e2e8f0;
-        }
-
-        .card:hover {
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-            transform: translateY(-5px);
-        }
-
-        .card h4 {
-            color: #81e6d9; /* Couleur d'accent pour les titres de cartes */
-            margin-top: 10px;
-            font-size: 1.4em;
-        }
-        .card p {
-            color: #cbd5e0;
-        }
-        
-        /* Retrait des styles de la bande défilante */
-        .developpeur-bande, .developpeur-bande marquee {
-            display: none !important;
-        }
-
-        /* Back to Home Button (N'apparaît pas sur l'accueil, mais le style est là) */
-        .btn-accueil {
-            display: none;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .service-cards {
-                flex-direction: column;
-            }
-            nav a {
-                display: block;
-                margin: 5px 0;
-            }
-            header .logo-container {
-                flex-direction: column;
-                margin-bottom: 5px;
-            }
-            header .logo-container img {
-                margin-right: 0;
-                margin-bottom: 10px;
-            }
-            #hero h2 {
-                font-size: 2em;
-            }
-            #hero p {
-                font-size: 1.1em;
-            }
-            .cta-button {
-                font-size: 1em;
-                padding: 12px 25px;
-            }
-            .card {
-                padding: 20px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="container">
-            <div class="logo-container">
-                <img src="logo.png" alt="Logo de l'entreprise">
-                <h1>[Nom de l'Entreprise] : L'IT à Votre Service</h1>
-            </div>
-            <nav>
-                <a href="index.html" class="active">Accueil</a>
-                <a href="services.html">Services</a>
-                <a href="galerie.html">Galerie</a>
-                <a href="a-propos.html">À Propos</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </div>
-    </header>
-
-    <div class="container">
-        <section id="hero">
-            <h2>Dépannage Informatique, Maintenance et Création Web pour PME à Bobo</h2>
-            <p>**Rapidité, Expertise et Confiance** : Redémarrez vos projets sans attendre.</p>
-            <a href="contact.html" class="cta-button">👉 Contactez-Nous pour une Intervention Immédiate</a>
-        </section>
-
-        <section>
-            <h3>Nos Solutions Clés en Main</h3>
-            <div class="service-cards">
-                <div class="card">
-                    <h4>🔧 Dépannage & Réparation PC</h4>
-                    <p>Diagnostic rapide et réparation efficace de tous types de pannes (logiciel, matériel, virus).</p>
-                </div>
-                <div class="card">
-                    <h4>💿 Installation de Systèmes & Logiciels</h4>
-                    <p>Installation sécurisée de Windows, macOS, et configuration de vos logiciels professionnels.</p>
-                </div>
-                <div class="card">
-                    <h4>🌐 Conception de Site Web</h4>
-                    <p>Création de sites vitrines professionnels pour renforcer votre présence en ligne.</p>
-                </div>
-            </div>
-        </section>
-        
-    </div>
-</body>
-</html>
+            font-size: 1rem; /*
