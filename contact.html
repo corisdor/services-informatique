@@ -229,7 +229,16 @@
     <section>
       <h2>Formulaire de Demande d'Intervention</h2>
       
-      <form action="VOTRE_ENDPOINT_FORMULAIRE" method="POST">
+      <form action="https://formsubmit.co/corisdorfirm@gmail.com" method="POST">
+        <!-- Redirige vers la page de succès -->
+<input type="hidden" name="_next" value="https://TON-NOM-UTILISATEUR.github.io/succes.html">
+
+<!-- Désactive le Captcha (optionnel) -->
+<input type="hidden" name="_captcha" value="false">
+
+<!-- Sujet du message reçu -->
+<input type="hidden" name="_subject" value="Nouvelle demande d'intervention depuis le site CORIS D'OR FIRM">
+
         <label for="nom">Nom / Société :</label>
         <input type="text" id="nom" name="Nom" placeholder="Ex: CORIS D'OR FIRM" required>
 
@@ -262,4 +271,5 @@
   </div>
 </body>
 </html>
+
 
